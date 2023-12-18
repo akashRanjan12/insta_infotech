@@ -2,6 +2,14 @@
   margin: 0;
   padding: 0;
 }
+#indx {
+  text-decoration: none;
+  color: white;
+}
+#log {
+  text-decoration: none;
+  color: white;
+}
 video {
   height: 80vh;
   width: 100%;
@@ -68,12 +76,108 @@ li:hover {
   text-decoration: underline;
   color: #d5deef;
   transform: translateY(-4px);
+  background: linear-gradient(to right, orange, rgb(156, 71, 156) 70%);
+  background-clip: text;
 }
 #right_logo {
   display: none;
   padding: 1vh;
   font-size: 1.2em;
 }
+/* login form */
+.home {
+  position: absolute;
+  z-index: -1;
+  height: 90vh;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgb(255, 166, 0, 0),
+    rgb(201, 6, 201, 0.3) 70%,
+    rgb(0, 75, 136) 100%
+  );
+}
+.Login_form {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 10vh;
+  #left_l {
+    height: 80vh;
+    width: 25vw;
+    background-color: #638ecb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #data_l {
+      padding: 3em 1em 1em 1em;
+      font-size: 1.1em;
+    }
+  }
+  #right_l {
+    height: 80vh;
+    width: 45vw;
+    background-color: #bbf3e5;
+    #division1 {
+      padding-left: 1.5em;
+      padding-top: 1em;
+      font-size: 1.6em;
+      font-family: "Times New Roman", Times, serif;
+    }
+    #division2 {
+      padding-top: 0.5em;
+      height: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 8em;
+      background: linear-gradient(
+        to top,
+        rgb(255, 166, 0, 0.5) 0%,
+        rgb(133, 0, 133, 0.8) 50%,
+        rgb(246, 160, 0, 0.5) 100%
+      );
+      background-clip: text;
+      color: transparent;
+    }
+    #division3 {
+      padding-top: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #name,
+      #psd {
+        height: 4vh;
+        width: 20em;
+        border: transparent;
+        border-radius: 10px;
+      }
+      #submit {
+        padding: 5px;
+        border: transparent;
+        border-radius: 10px;
+        font-size: 1.2em;
+        width: 12em;
+        background: linear-gradient(
+          to right,
+          rgb(255, 166, 0, 0.2),
+          rgb(201, 6, 201, 0.2) 50%,
+          rgb(255, 179, 0, 0.2) 100%
+        );
+        cursor: pointer;
+      }
+    }
+    #new_user {
+      padding-top: 3em;
+      padding-left: 5em;
+      padding-bottom: 1em;
+    }
+  }
+}
+
+/* login frm end */
 @media (max-width: 900px) {
   #right ul {
     gap: 2vw;
@@ -85,5 +189,18 @@ li:hover {
   }
   #right_logo {
     display: block;
+  }
+  .Login_form {
+    flex-direction: column-reverse;
+    height: auto;
+    #left_l {
+      width: 100%;
+      background-color: rgb(187, 250, 229);
+    }
+    #right_l {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px black solid;
+    }
   }
 }
